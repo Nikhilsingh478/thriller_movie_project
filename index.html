@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Futuristic Movie Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.css">
-</head>
-<body data-scroll-container>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuristic Movie Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body data-scroll-container>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">MovieTitle</div>
+      <div class="hamburger">☰</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cast">Cast</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">MovieTitle</div>
-    <div class="hamburger">☰</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#cast">Cast</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Background Video Section -->
+    <section class="video-section" data-scroll-section>
+      <div class="video-container">
+        <video class="background-video" autoplay muted loop>
+          <source src="./scene6_animted-vmake.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content">
+        <h1>Welcome to the Movie Experience</h1>
+        <p>Discover the journey, explore the mystery, live the thrill!</p>
+      </div>
+    </section>
 
-  <!-- Background Video Section -->
-  <section class="video-section" data-scroll-section>
-    <div class="video-container">
-      <video class="background-video" autoplay muted loop>
-        <source src="./scene6_animted-vmake.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    
+
+    <div id="home" class="w-full bg-zinc-900">
+      <div id="parentt" class="parent relative top-0 left-0 w-full h-[700vh]">
+        <div class="w-full sticky top-0 left-0 h-screen">
+          <canvas class="w-full h-screen" id="frame"></canvas>
+        </div>
+      </div>
     </div>
-    <div class="content">
-      <h1>Welcome to the Movie Experience</h1>
-      <p>Discover the journey, explore the mystery, live the thrill!</p>
-    </div>
-  </section>
-
-  <!-- Production Section (Positioned after the video section) -->
-  <!-- <section class="production-section" data-scroll-section>
+    <!-- Production Section (Positioned after the video section) -->
+    <!-- <section class="production-section" data-scroll-section>
     <h2>Behind the Scenes</h2>
     <div class="production-grid">
       <div class="production-item" data-scroll data-scroll-speed="1">
@@ -64,9 +79,21 @@
     </div>
   </section> -->
 
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <!-- <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script> -->
-  <script src="script.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
 </html>
